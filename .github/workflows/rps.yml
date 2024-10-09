@@ -5,11 +5,13 @@ name: "Rock Paper Scissors"
     branches:
       - main
     paths:
+      - ".github/workflows/rps.yml"
       - "rock-paper-scissors/**"
   pull_request:
     branches:
       - main
     paths:
+      - ".github/workflows/rps.yml"
       - "rock-paper-scissors/**"
 
 jobs:
