@@ -1,0 +1,5 @@
+public class AlwaysPaperAgent implements IAgent {
+    public HandShape nextMove() {
+        return HandShape.PAPER;
+    }
+}
