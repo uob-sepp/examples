@@ -1,0 +1,28 @@
+name: "Rock Paper Scissors"
+
+"on":
+  push:
+    branches:
+      - main
+    paths:
+      - "rock-paper-scissors/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "rock-paper-scissors/**"
+
+jobs:
+  build:
+    name: "Build & Test"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: "Clone repository"
+        uses: actions/checkout@v4
+
+      - name: "Build"
+        run: gradle build
+
+      - name: "Test"
+        run: gradle test
