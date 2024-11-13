@@ -25,3 +25,5 @@ jobs:
 
       - name: Build with Stack
         uses: mbg/actions/stack/build@v0.1
+        with:
+          project-directory: ${{ github.workspace }}/quickcheck
