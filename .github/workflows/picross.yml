@@ -1,0 +1,27 @@
+name: "Picross"
+
+"on":
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/picross.yml"
+      - "quickcheck/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/picross.yml"
+      - "quickcheck/**"
+
+jobs:
+  build:
+    name: "Build & Test"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: "Clone repository"
+        uses: actions/checkout@v4
+
+      - name: Build with Stack
+        uses: mbg/actions/stack/build@v0.1
