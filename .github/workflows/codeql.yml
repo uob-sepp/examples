@@ -23,5 +23,7 @@ jobs:
           config-file: ./.github/codeql-config.yml
 
       - uses: github/codeql-action/autobuild@v3
+        with:
+          working-directory: codeql-demo
 
       - uses: github/codeql-action/analyze@v3
